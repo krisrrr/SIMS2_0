@@ -33,27 +33,6 @@ class Activity(models.Model):
         ordering = ['-date_time']
 
 
-class Category(models.Model):
-    title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
-
-    class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
-        ordering = ['title']
-
-    def __str__(self):
-        return self.title
-
-
-class Alarm(models.Model):
-    title = models.CharField(max_length=50, verbose_name='Название')
-    wakeup_time = models.TimeField(verbose_name='Время пробуждения')
-    repeat = models.CharField(max_length=150, verbose_name='Повтор')
-
-    def __str__(self):
-        return self.title
-
-
 class Articles(models.Model):
     title = models.CharField(max_length=200)
     article = models.TextField()
