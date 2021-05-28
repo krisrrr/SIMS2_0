@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Title %}
+  {{ title }}
+{% endblock %}
+
+{% block Body %}
+  <img src="data:image/png;base64,{{ graphic|safe }}" class="mr-4" alt="">
+{% endblock %}

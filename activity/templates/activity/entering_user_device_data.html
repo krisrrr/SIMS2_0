@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% block Title %}
+  Ввод данных устройства
+{% endblock %}
+
+{% block Body %}
+<div class="container mt-5 text-center" style="width: 60%">
+  <h1>Ввод данных устройства</h1>
+  <br>
+  <p>Введите следующие данные устройства:</p>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-outline-primary">Продолжить</button>
+  </form>
+</div>
+{% endblock %}
